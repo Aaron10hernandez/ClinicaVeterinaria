@@ -17,18 +17,16 @@ public class Consulta {
     private String diagnostico;
     private int duracionMinutos;
     private String fecha;
-    private ArrayList <Medicamento> medicinas;
 
     public Consulta() {
     }
 
-    public Consulta(Mascota datosPaciente, String motivo, String diagnostico, int duracionMinutos, String fecha, ArrayList<Medicamento> medicinas) {
+    public Consulta(Mascota datosPaciente, String motivo, String diagnostico, int duracionMinutos, String fecha){
         this.datosPaciente = datosPaciente;
         this.motivo = motivo;
         this.diagnostico = diagnostico;
         this.duracionMinutos = duracionMinutos;
         this.fecha = fecha;
-        this.medicinas = medicinas;
     }
 
     public Mascota getDatosPaciente() {
@@ -69,14 +67,6 @@ public class Consulta {
 
     public void setFecha(String fecha) {
         this.fecha = fecha;
-    }
-
-    public ArrayList<Medicamento> getMedicinas() {
-        return medicinas;
-    }
-
-    public void setMedicinas(ArrayList<Medicamento> medicinas) {
-        this.medicinas = medicinas;
     }
     
     

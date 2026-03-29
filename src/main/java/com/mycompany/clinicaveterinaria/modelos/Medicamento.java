@@ -10,17 +10,13 @@ package com.mycompany.clinicaveterinaria.modelos;
  */
 public class Medicamento {
     private String nombre;
-    private int codigo;
-    private boolean disponibilidad;
     private String indicacionesUso;
 
     public Medicamento() {
     }
 
-    public Medicamento(String nombre, int codigo, boolean disponibilidad, String indicacionesUso) {
+    public Medicamento(String nombre, String indicacionesUso) {
         this.nombre = nombre;
-        this.codigo = codigo;
-        this.disponibilidad = disponibilidad;
         this.indicacionesUso = indicacionesUso;
     }
 
@@ -30,22 +26,6 @@ public class Medicamento {
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
-    }
-
-    public int getCodigo() {
-        return codigo;
-    }
-
-    public void setCodigo(int codigo) {
-        this.codigo = codigo;
-    }
-
-    public boolean isDisponibilidad() {
-        return disponibilidad;
-    }
-
-    public void setDisponibilidad(boolean disponibilidad) {
-        this.disponibilidad = disponibilidad;
     }
 
     public String getIndicacionesUso() {

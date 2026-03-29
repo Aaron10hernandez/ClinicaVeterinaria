@@ -16,18 +16,18 @@ public class Animal {
     private String raza;
     private String tipoSangre;
     private String sexo;
-    private ArrayList <String> alergias;
+
 
     public Animal() {
     }
 
-    public Animal(String nombre, int edad, String raza, String tipoSangre, String sexo, ArrayList<String> alergias) {
+    public Animal(String nombre, int edad, String raza, String tipoSangre, String sexo) {
         this.nombre = nombre;
         this.edad = edad;
         this.raza = raza;
         this.tipoSangre = tipoSangre;
         this.sexo = sexo;
-        this.alergias = alergias;
+
     }
 
     public String getNombre() {
@@ -70,13 +70,6 @@ public class Animal {
         this.sexo = sexo;
     }
 
-    public ArrayList<String> getAlergias() {
-        return alergias;
-    }
-
-    public void setAlergias(ArrayList<String> alergias) {
-        this.alergias = alergias;
-    }
     
     
     

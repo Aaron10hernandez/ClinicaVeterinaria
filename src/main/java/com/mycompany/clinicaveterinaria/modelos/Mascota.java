@@ -13,13 +13,17 @@ import java.util.ArrayList;
 public class Mascota extends Animal {
     
     private Propietario propietario;
-
+    private ArrayList <String> alergias;
+    private ArrayList <Medicamento> medicinasRecetadas;
+    
     public Mascota() {
     }
 
-    public Mascota(Propietario propietario, String nombre, int edad, String raza, String tipoSangre, String sexo, ArrayList<String> alergias) {
-        super(nombre, edad, raza, tipoSangre, sexo, alergias);
+    public Mascota(Propietario propietario, ArrayList<String> alergias, ArrayList<Medicamento> medicinasRecetadas, String nombre, int edad, String raza, String tipoSangre, String sexo) {
+        super(nombre, edad, raza, tipoSangre, sexo);
         this.propietario = propietario;
+        this.alergias = alergias;
+        this.medicinasRecetadas = medicinasRecetadas;
     }
 
     public Propietario getPropietario() {
@@ -28,6 +32,22 @@ public class Mascota extends Animal {
 
     public void setPropietario(Propietario propietario) {
         this.propietario = propietario;
+    }
+
+    public ArrayList<String> getAlergias() {
+        return alergias;
+    }
+
+    public void setAlergias(ArrayList<String> alergias) {
+        this.alergias = alergias;
+    }
+
+    public ArrayList<Medicamento> getMedicinasRecetadas() {
+        return medicinasRecetadas;
+    }
+
+    public void setMedicinasRecetadas(Medicamento medicinasRecetadas) {
+        this.medicinasRecetadas.add(medicinasRecetadas);   
     }
     
     

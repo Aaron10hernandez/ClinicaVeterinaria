@@ -48,4 +48,15 @@ public class Veterinario extends Persona {
         this.disponible = disponible;
     }
     
+    public void recetar(String nombre, String dosis, Mascota mascota){
+        
+        Medicamento m = new Medicamento();
+        
+        m.setNombre(nombre);
+        m.setIndicacionesUso(dosis);
+        
+        mascota.setMedicinasRecetadas(m);
+        System.out.println("Receta confirmada!");
+    }
+    
 }
