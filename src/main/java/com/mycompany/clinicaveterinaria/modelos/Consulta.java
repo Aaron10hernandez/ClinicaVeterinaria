@@ -17,18 +17,30 @@ public class Consulta {
     private String diagnostico;
     private int duracionMinutos;
     private String fecha;
+    private Veterinario veterinario;
+    private ArrayList <Medicamento> medicamentos = new ArrayList();
 
     public Consulta() {
     }
 
-    public Consulta(Mascota datosPaciente, String motivo, String diagnostico, int duracionMinutos, String fecha){
+    public Consulta(Mascota datosPaciente, String motivo, String diagnostico, int duracionMinutos, String fecha, Veterinario veterinario) {
         this.datosPaciente = datosPaciente;
         this.motivo = motivo;
         this.diagnostico = diagnostico;
         this.duracionMinutos = duracionMinutos;
         this.fecha = fecha;
+        this.veterinario = veterinario;
     }
 
+    public Veterinario getVeterinario() {
+        return veterinario;
+    }
+
+    public void setVeterinario(Veterinario veterinario) {
+        this.veterinario = veterinario;
+    }
+
+    
     public Mascota getDatosPaciente() {
         return datosPaciente;
     }
@@ -68,6 +80,20 @@ public class Consulta {
     public void setFecha(String fecha) {
         this.fecha = fecha;
     }
+
+    public ArrayList<Medicamento> getMedicamentos() {
+        return medicamentos;
+    }
+
+    public void setMedicamentos(Medicamento medicamentos) {
+        this.medicamentos.add(medicamentos);
+    }
+
+    @Override
+    public String toString() {
+        return "Consulta{" + "datosPaciente=" + datosPaciente.getNombre() +","+datosPaciente.getRaza()+","+datosPaciente.getSexo()+","+datosPaciente.getTipoSangre()+ ", motivo=" + motivo + ", diagnostico=" + diagnostico + ", duracionMinutos=" + duracionMinutos + ", fecha=" + fecha + ", veterinario=" + veterinario + ", medicamentos=" + medicamentos + '}';
+    }
+    
     
     
 }

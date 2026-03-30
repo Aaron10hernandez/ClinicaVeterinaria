@@ -35,6 +35,11 @@ public class Medicamento {
     public void setIndicacionesUso(String indicacionesUso) {
         this.indicacionesUso = indicacionesUso;
     }
+
+    @Override
+    public String toString() {
+        return "Medicamento{" + "nombre=" + nombre + ", indicacionesUso=" + indicacionesUso + '}';
+    }
     
     
 }

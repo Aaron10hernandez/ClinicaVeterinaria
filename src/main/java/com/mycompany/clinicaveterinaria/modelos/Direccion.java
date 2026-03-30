@@ -46,6 +46,11 @@ public class Direccion {
     public void setCalle(String calle) {
         this.calle = calle;
     }
+
+    @Override
+    public String toString() {
+        return "Direccion{" + "ciudad=" + ciudad + ", barrio=" + barrio + ", calle=" + calle + '}';
+    }
     
     
     

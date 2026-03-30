@@ -56,7 +56,9 @@ public class Persona {
         return direccion;
     }
 
-    public void setDireccion(Direccion direccion) {
+    public void setDireccion(String c, String b, String s) {
+        Direccion direccion=new Direccion(c,b,s);
+        
         this.direccion = direccion;
     }
 
@@ -74,6 +76,11 @@ public class Persona {
 
     public void setCorreo(String correo) {
         this.correo = correo;
+    }
+
+    @Override
+    public String toString() {
+        return "Persona{" + "nombre=" + nombre + ", edad=" + edad + ", identificacion=" + identificacion + ", direccion=" + direccion + ", telefono=" + telefono + ", correo=" + correo + '}';
     }
     
     

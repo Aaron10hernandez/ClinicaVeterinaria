@@ -4,34 +4,35 @@
  */
 package com.mycompany.clinicaveterinaria.modelos;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author USUARIO
  */
 public class Propietario extends Persona {
     
-    private Mascota mascota;
+    private ArrayList <Mascota> mascota = new ArrayList();
 
     public Propietario() {
     }
 
-    public Propietario(Mascota mascota) {
-        this.mascota = mascota;
-    }
-
-    public Propietario(Mascota mascota, String nombre, int edad, int identificacion, Direccion direccion, int telefono, String correo) {
+    public Propietario(String nombre, int edad, int identificacion, Direccion direccion, int telefono, String correo) {
         super(nombre, edad, identificacion, direccion, telefono, correo);
-        this.mascota = mascota;
     }
 
-    public Mascota getMascota() {
+    public ArrayList<Mascota> getMascota() {
         return mascota;
     }
 
     public void setMascota(Mascota mascota) {
-        this.mascota = mascota;
+        this.mascota.add(mascota);
     }
 
+    @Override
+    public String toString() {
+        return "Propietario{" + "mascota=" + mascota + '}';
+    }
     
     
     

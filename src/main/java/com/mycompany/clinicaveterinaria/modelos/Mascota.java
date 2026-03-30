@@ -12,34 +12,24 @@ import java.util.ArrayList;
  */
 public class Mascota extends Animal {
     
-    private Propietario propietario;
-    private ArrayList <String> alergias;
-    private ArrayList <Medicamento> medicinasRecetadas;
+    private ArrayList <String> alergias= new ArrayList();
+    private ArrayList <Medicamento> medicinasRecetadas = new ArrayList();
     
     public Mascota() {
     }
 
-    public Mascota(Propietario propietario, ArrayList<String> alergias, ArrayList<Medicamento> medicinasRecetadas, String nombre, int edad, String raza, String tipoSangre, String sexo) {
+    public Mascota(ArrayList<String> alergias, ArrayList<Medicamento> medicinasRecetadas, String nombre, int edad, String raza, String tipoSangre, String sexo) {
         super(nombre, edad, raza, tipoSangre, sexo);
-        this.propietario = propietario;
         this.alergias = alergias;
         this.medicinasRecetadas = medicinasRecetadas;
-    }
-
-    public Propietario getPropietario() {
-        return propietario;
-    }
-
-    public void setPropietario(Propietario propietario) {
-        this.propietario = propietario;
     }
 
     public ArrayList<String> getAlergias() {
         return alergias;
     }
 
-    public void setAlergias(ArrayList<String> alergias) {
-        this.alergias = alergias;
+    public void setAlergias(String alergias) {
+        this.alergias.add(alergias);
     }
 
     public ArrayList<Medicamento> getMedicinasRecetadas() {
@@ -48,6 +38,11 @@ public class Mascota extends Animal {
 
     public void setMedicinasRecetadas(Medicamento medicinasRecetadas) {
         this.medicinasRecetadas.add(medicinasRecetadas);   
+    }
+
+    @Override
+    public String toString() {
+        return "Mascota{" + " alergias=" + alergias + ", medicinasRecetadas=" + medicinasRecetadas + '}';
     }
     
     

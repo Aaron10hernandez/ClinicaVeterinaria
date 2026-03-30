@@ -56,7 +56,13 @@ public class Veterinario extends Persona {
         m.setIndicacionesUso(dosis);
         
         mascota.setMedicinasRecetadas(m);
+        
         System.out.println("Receta confirmada!");
+    }
+
+    @Override
+    public String toString() {
+        return "Veterinario{" + "tarjetaPro=" + tarjetaPro + ", consultorio=" + consultorio + ", disponible=" + disponible + '}';
     }
     
 }

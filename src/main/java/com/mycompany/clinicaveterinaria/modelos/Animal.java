@@ -70,6 +70,11 @@ public class Animal {
         this.sexo = sexo;
     }
 
+    @Override
+    public String toString() {
+        return "Animal{" + "nombre=" + nombre + ", edad=" + edad + ", raza=" + raza + ", tipoSangre=" + tipoSangre + ", sexo=" + sexo + '}';
+    }
+
     
     
     
